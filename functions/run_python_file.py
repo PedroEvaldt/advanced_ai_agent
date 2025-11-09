@@ -22,8 +22,10 @@ def run_python_file(working_dir, file_path, args=[]):
         stderr = completed_process.stderr
         output_parts = []
         if stdout:
+            stdout = stdout.strip()
             output_parts.append(f"STDOUT: {stdout}")
         if stderr:
+            stderr = stderr.strip()
             output_parts.append(f"STDERR: {stderr}")
         if completed_process.returncode != 0:
             output_parts.append(f"Process exited with code {completed_process.returncode}")

@@ -5,7 +5,7 @@ def get_files_info(working_dir, directory="."):
     directory = os.path.join(working_dir, directory)
     directory = os.path.abspath(directory)
     working_dir = os.path.abspath(working_dir)
-    print_msg = f"Result for {directory if directory.endswith(".") else "current"} directory:\n"
+    print_msg = f"Result for {directory if directory.endswith('.') else 'current'} directory:\n"
     if not directory.startswith(working_dir):
         print_msg += f'Error: Cannot list "{directory}" as it is outside the permitted working directory\n'
         return print_msg
