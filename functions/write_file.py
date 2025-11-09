@@ -1,5 +1,4 @@
 import os
-from functions.get_file_content import get_file_content
 
 def write_file(working_dir, file_path, content):
     full_path = os.path.abspath(os.path.join(working_dir, file_path))
